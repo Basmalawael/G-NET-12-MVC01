@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MVC1.Controllers
 {
-    public class PlanController : Controller
+    public class PlanController : Controller 
     {
         private readonly GymDbContext _context;
 
