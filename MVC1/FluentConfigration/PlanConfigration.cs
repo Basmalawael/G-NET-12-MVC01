@@ -4,7 +4,7 @@ using MVC1.Models;
 namespace MVC1.FluentConfigration
 {
     public class PlanConfigration : IEntityTypeConfiguration<Plan>
-    {
+    { 
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Plan> builder)
         {
             builder.Property(P => P.Name)
