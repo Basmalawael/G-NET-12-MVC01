@@ -5,7 +5,7 @@ using MVC1.Models;
 namespace MVC1.Context
 {
     public class GymDbContext :DbContext
-    {
+    { 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=.;Database=GymDB;Trusted_Connection=True;TrustServerCertificate=True;");
