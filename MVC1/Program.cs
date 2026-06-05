@@ -1,3 +1,5 @@
+using GymManagement.DAL.Repository;
+using Microsoft.EntityFrameworkCore;
 using MVC1.Context;
 
 namespace MVC1
@@ -12,6 +14,14 @@ namespace MVC1
          
             builder.Services.AddDbContext<GymDbContext>();
             builder.Services.AddControllersWithViews();
+
+            //DI 
+            builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+
+            builder.Services.AddDbContext<GymDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
 
         
             var app = builder.Build();
